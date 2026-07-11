@@ -1,0 +1,75 @@
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    inset: 0;
+    background: rgb(40, 40, 40);
+    color: rgb(209, 209, 209);
+}
+
+.home hr{
+    width: 400px;
+}
+
+.name h1{
+    font-size: 110px;
+}
+
+.name{
+    display: grid;
+    gap: 20px;
+    font-weight: 400;
+    margin-top: -100px;
+}
+
+.back{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.second {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* fills screen neatly */
+  height: auto; 
+}
+
+.top-nav{
+    display: flex;
+    justify-content: center;
+    gap:90px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    color: rgb(236, 236, 236);
+    backdrop-filter: blur(10px); 
+    height: 60px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    font-size: 15px;
+}
+
+.hero{
+    display: grid;
+    gap: 200px;
+    margin-top: 250px;
+}
+
+
+.projects{
+    padding-top: 70px;
+    font-size: 120px;;
+    color: rgb(90, 90, 90);
+    background-color: rgb(203, 203, 203);
+    min-height: 150vh;
+}
+
