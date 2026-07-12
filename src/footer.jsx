@@ -45,7 +45,7 @@ function Footer() {
           <span className="footer-label">Site</span>
           <a href="#home">Home</a>
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
+          <a href="#project">Projects</a>
         </div>
       </div>
 

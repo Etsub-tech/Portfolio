@@ -1,11 +1,13 @@
-import Home from "./Home";
-import Backround from "./background-img";
+import Home from "./home";
+import Background from "./background-img";
+import Footer from "./footer";
 
 function App() {
   return (
     <>
-      <Backround />
+      <Background />
       <Home />
+      <Footer />
     </>
   );
 }
