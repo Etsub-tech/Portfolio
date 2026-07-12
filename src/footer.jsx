@@ -11,9 +11,6 @@ function Footer() {
           <br />
           SOMETHING GOOD.
         </h2>
-        <a className="footer-email" href="mailto:etsubamha4@gmail.com">
-          etsubamha4@gmail.com
-        </a>
       </div>
 
       <div className="footer-grid">
@@ -45,6 +42,7 @@ function Footer() {
           <span className="footer-label">Site</span>
           <a href="#home">Home</a>
           <a href="#about">About</a>
+          <a href="#skills">Skills</a>
           <a href="#project">Projects</a>
         </div>
       </div>
