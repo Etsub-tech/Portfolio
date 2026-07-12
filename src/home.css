@@ -439,7 +439,13 @@
 
 .scroller {
   position: relative;
+  max-width: 100%;          /* smaller container width */
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 16px;             /* reduce padding */
+  overflow: hidden;
 }
+
 
 .scroller::before,
 .scroller::after {
@@ -462,6 +468,11 @@
   background: linear-gradient(270deg, var(--stone-100), rgba(206, 189, 189, 0));
 }
 
+.scroll-spacer {
+  flex: 0 0 80px; /* acts like right padding */
+}
+
+
 .ux-ui,
 .web {
   display: flex;
@@ -471,15 +482,21 @@
   scroll-snap-type: x proximity;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  padding: 20px clamp(24px, 5vw, 60px) 60px;
+  padding: 50px;
   height: auto;
   text-align: left;
+  min-width: 100%; 
 }
 
 .proj-card {
   flex: 0 0 auto;
   padding-left: 0;
   transition: transform 0.3s ease;
+  background: rgba(255, 245, 245, 0.8);
+  border-radius: 8px;
+  max-width: 500px;
+  padding: 8px; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08)
   
 }
 
@@ -501,6 +518,8 @@
   border-radius: 4px;
   background: rgba(59, 59, 59, 0.08);
   position: relative;
+  height: clamp(200px, 28vw, 320px); /* smaller image height */
+  border-radius: 6px;
 }
 
 .proj-image-slot img {
@@ -546,23 +565,7 @@
   border-radius: 4px;
 }
 
-.proj-tag {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 50%);
-  background: #fff;
-  color: var(--charcoal);
-  font-family: var(--sans);
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 9px 20px;
-  border-radius: 999px;
-  box-shadow: 0 10px 24px -8px rgba(59, 59, 59, 0.35);
-  white-space: nowrap;
-  z-index: 1;
-}
+
 
 .proj-card h3 {
   font-family: var(--heading);

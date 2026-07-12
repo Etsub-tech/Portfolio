@@ -188,7 +188,6 @@ function Home() {
         </h2>
         <p className="expertise-sub reveal">
           I'm a UI/UX designer passionate about crafting intuitive and engaging digital experiences.
-
           Alongside my design work, I develop applications using the MERN stack and Flutter, which helps me bridge the gap between design and development. My focus is on creating interfaces that not only look great, but feel seamless and effortless to use.
         </p>
 
@@ -233,6 +232,7 @@ function Home() {
                 <p>{proj.description}</p>
               </div>
             ))}
+             <div className="scroll-spacer"></div>
           </div>
         </div>
 
@@ -246,6 +246,7 @@ function Home() {
                 <p>{proj.description}</p>
               </div>
             ))}
+            <div className="scroll-spacer"></div>
           </div>
         </div>
       </section>
