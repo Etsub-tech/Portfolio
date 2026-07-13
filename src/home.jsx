@@ -8,6 +8,7 @@ import web4 from "./assets/web/web4.png";
 import web5 from "./assets/web/web5.png";
 import { useEffect } from "react";
 import { SKILLS } from "./skill-icons";
+import DeviceMockup from "./device-mockup";
 import "./home.css";
 
 function Home() {
@@ -169,6 +170,8 @@ function Home() {
               Scroll
             </div>
           </div>
+
+          <DeviceMockup />
         </div>
       </section>
 

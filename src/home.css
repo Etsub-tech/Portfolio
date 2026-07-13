@@ -87,11 +87,18 @@
 
 .hero {
   display: flex;
+  gap: 200px;
   justify-content: flex-start;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 clamp(24px, 6vw, 64px);
+}
+
+@media (min-width: 901px) {
+  .hero {
+    align-items: center;
+  }
 }
 
 .name {

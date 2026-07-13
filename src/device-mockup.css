@@ -1,0 +1,198 @@
+/* ── 3D device mockup — desktop only, sits beside the hero name ── */
+
+.device-scene {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .device-scene {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: clamp(240px, 24vw, 340px);
+    height: clamp(200px, 20vw, 280px);
+    margin-left: clamp(24px, 5vw, 72px);
+    perspective: 1400px;
+    perspective-origin: 50% 40%;
+  }
+}
+
+.device {
+  position: relative;
+  width: 78%;
+  height: 78%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Grounding shadow beneath the device */
+.device-shadow {
+  position: absolute;
+  left: 50%;
+  bottom: -22px;
+  width: 82%;
+  height: 26px;
+  transform: translateX(-50%) translateZ(-40px);
+  background: radial-gradient(
+    closest-side,
+    rgba(59, 59, 59, 0.4),
+    rgba(59, 59, 59, 0) 72%
+  );
+  filter: blur(2px);
+}
+
+/* Small kickstand foot */
+.device-stand {
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  width: 34%;
+  height: 14px;
+  transform: translateX(-50%) translateZ(-18px) rotateX(60deg);
+  background: linear-gradient(180deg, var(--charcoal), rgb(38, 38, 38));
+  border-radius: 3px;
+  transform-origin: top center;
+}
+
+.device-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+/* Side/depth face of the device, revealed as it tilts */
+.device-edge {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgb(46, 46, 46), var(--charcoal));
+  transform: translateZ(-14px);
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.55);
+}
+
+.device-screen {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: clamp(14px, 1.6vw, 20px);
+  background: linear-gradient(
+    160deg,
+    var(--stone-500) 0%,
+    var(--charcoal) 100%
+  );
+  border: 2px solid rgba(209, 209, 209, 0.18);
+  transform: translateZ(2px);
+  transform-style: preserve-3d;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.device-glow {
+  position: absolute;
+  inset: -20% -20% auto auto;
+  width: 65%;
+  height: 65%;
+  background: radial-gradient(
+    closest-side,
+    rgba(170, 59, 255, 0.5),
+    rgba(170, 59, 255, 0)
+  );
+  transform: translateZ(6px);
+  pointer-events: none;
+}
+
+.device-topbar {
+  position: relative;
+  display: flex;
+  gap: 6px;
+  transform: translateZ(20px);
+  margin-bottom: clamp(14px, 2vw, 22px);
+}
+
+.device-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-dim);
+}
+
+.device-dot--a {
+  background: var(--accent);
+}
+
+.device-line {
+  position: relative;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(209, 209, 209, 0.28);
+  margin-bottom: 10px;
+  transform: translateZ(16px);
+}
+
+.device-line--1 {
+  width: 72%;
+  background: rgba(209, 209, 209, 0.55);
+}
+
+.device-line--2 {
+  width: 88%;
+}
+
+.device-line--3 {
+  width: 54%;
+}
+
+.device-line--4 {
+  width: 66%;
+  background: rgba(170, 59, 255, 0.55);
+}
+
+.device-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  box-shadow: 0 14px 26px -10px rgba(0, 0, 0, 0.5);
+}
+
+.device-chip--tag {
+  right: clamp(12px, 1.6vw, 18px);
+  bottom: clamp(40px, 6vw, 56px);
+  width: 40px;
+  height: 28px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  transform: translateZ(34px);
+}
+
+.device-chip--cursor {
+  left: 30%;
+  bottom: 16%;
+  width: 26px;
+  height: 26px;
+  color: var(--accent);
+  transform: translateZ(44px);
+}
+
+.device-chip--dial {
+  right: 14%;
+  top: 20%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, var(--linen), var(--stone-300));
+  transform: translateZ(30px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .device {
+    transition: none;
+  }
+}
